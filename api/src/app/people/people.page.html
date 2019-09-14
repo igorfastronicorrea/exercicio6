@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>people</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div>
+      <ul><li *ngFor="let people of peoples" (click)="consultarDetalhe(people)">
+        {{people.name}}
+      </li></ul>
+    </div>
+    <ion-card>
+        <ion-card-header>
+         
+          <ion-card-title>{{current_people.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{current_people.gender}}
+          
+          {{current_people.hair_color}}
+          {{current_people.height}}
+          {{current_people.homeworld}}
+          {{current_people.mass}}
+          {{current_people.name}}
+          {{current_people.skin_color}}
+          {{current_people.created}}
+          {{current_people.edited}}
+
+        </ion-card-content>
+      </ion-card>
+      
+</ion-content>
